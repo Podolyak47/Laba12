@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.845,=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.210,=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021.02.18 11:00:41.845,=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021.02.18 11:01:04.324,C:\Users\stud\Desktop\Лаб12\Unit1.dfm=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2021.02.18 11:01:04.324,C:\Users\stud\Desktop\Лаб12\Unit1.pas=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021.02.18 11:31:14.456,C:\Users\stud\Desktop\12\Project1.dproj=C:\Users\stud\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\stud\Desktop\Лаб12\Unit1.dfm=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.456,C:\Users\stud\Desktop\12\Project1.dproj=C:\Users\stud\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\stud\Desktop\Лаб12\Unit1.pas=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>
