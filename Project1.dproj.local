@@ -3,8 +3,13 @@
 	<Transactions>
     <Transaction>1899.12.30 00:00:00.000.845,=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.210,=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\stud\Desktop\Лаб12\Unit1.dfm=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.456,C:\Users\stud\Desktop\12\Project1.dproj=C:\Users\stud\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\stud\Desktop\Лаб12\Unit1.pas=C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-  </Transactions>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\stud\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\stud\Desktop\Лаб12\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\stud\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\stud\Desktop\Лаб12\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.456,C:\Users\stud\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\stud\Desktop\12\Project1.dproj</Transaction>
+    <Transaction>2021.02.24 11:57:16.789,C:\Users\stud\Лаб12\Unit1.pas=</Transaction>
+    <Transaction>2021.02.24 11:57:24.408,=C:\Users\stud\Laba12\Unit1.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>
