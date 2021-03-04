@@ -12,28 +12,43 @@ type
     Button2: TButton;
     Memo1: TMemo;
     Button3: TButton;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
   end;
  TParallel=class
+  private
+    procedure Init(a, b, c: word);
    public
    Fa:word; //поле хранящее ширину
    Fb:word; //после хранящее длину
    Fc:word; //поле хранящее высоту
-   procedure Init(a,b,c:word);
+   {procedure Init(a,b,c:word);}
+   constructor Create(a, b, c: word);
+
+
    function Volume:word; //Метод-функция
                           //возвращающая объем
    procedure Show;
 
  end; //конец описания класса
+TBar = class(TParallel)
+public
+ FRo:real;
+ constructor Create(a,b,c:word; Ro: real);
+ function massa:real;
+ procedure Show;
+end;
 var
   Form1: TForm1;
   Par1:TParallel;
+  Bar1:TBar;
   Par:array [1..5] of TParallel;
   x:word=0;
   y:word=0;
@@ -52,6 +67,13 @@ function TParallel.Volume:word;
 begin
 result:=Fa*Fb*Fc;
 end;
+constructor TParallel.Create(a, b, c: word);
+begin
+Fa:=a; //присваиваем полю Fa значение a, введенное из внешней программы
+Fb:=b; //присваиваем полю Fb значение b, введенное из внешней программы
+Fc:=c; //присваиваем полю Fc значение c, введенное из внешней программы
+end;
+
 procedure TParallel.Init(a, b, c: word);
 begin
 Fa:=a; //присваиваем полю Fa значение a
@@ -61,11 +83,11 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 x:=x+1; y:=y+1; z:=z+1;
-Par1:=TParallel.Create; // Создать объект в памяти
+Par1:=TParallel.Create(x,y,z); {Методом конструктором размещаем объект в динамической памяти и инициализируем поля объекта. Создаем объект.}
 Par[x]:=Par1;
-Par1.Init(x,y,z); // Инициализировать поля объекта
 Par1.Show;// Вывести на экран значение объема и полей объекта
-Memo1.Lines.Add('Адрес в памяти объекта, содержащийся в Par1, равен ' +IntToStr(integer(Par1)) );
+Memo1.Lines.Add('Адрес в памяти объекта, содержащийся в Par1, равен '
++IntToStr(integer(Par1)) );
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -83,5 +105,34 @@ for i:=1 to 5 do
 begin  Memo1.Lines.Add('Адрес объекта с номером '+IntToStr(i) +' равен '+IntToStr( integer(Par[i]))+' Поле Fa = '+ IntToStr(Par[i].Fa) );
 Par[i].Show;
 end;
-end; //Вызываем метод Show очередного объекта из массива
+end; procedure TForm1.Button4Click(Sender: TObject);
+begin
+Bar1:=TBar.Create(1,2,3,10.5);
+Bar1.Show;
+end;
+
+//Вызываем метод Show очередного объекта из массива
+{ TBar }
+
+constructor TBar.Create(a, b, c: word; Ro: real);
+begin
+inherited Create(a,b,c);
+FRo:=Ro;
+end;
+
+function TBar.massa: real;
+begin
+result:=FRo*Volume;
+end;
+
+procedure TBar.Show;
+begin
+ShowMessage('Объем параллелепипеда равен ' + IntToStr(Volume)+#10#13+
+'Ширина – Поле Fa= '+IntToStr(Fa)+#10#13+
+'Длина – Поле Fb= '+IntToStr(Fb) +#10#13+
+'Высота – Поле Fc= '+IntToStr(Fc)+#10#13+
+'Плотность – Поле FRo= '+FloatToStr(FRo)+#10#13+
+'Масса = '+FloatToStr(massa) );
+end;
+
 end.
